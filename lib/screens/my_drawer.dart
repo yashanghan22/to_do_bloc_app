@@ -15,12 +15,21 @@ class MyDrawer extends StatelessWidget {
           children: [
             Container(
               width: double.maxFinite,
+              height: 90,
               alignment: Alignment.center,
               padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 10),
-              color: Colors.grey,
+              decoration: BoxDecoration(
+                  color: Colors.indigo[700],
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(15),
+                      bottomRight: Radius.circular(15))),
               child: Text('Task Drawer',
-                  style: Theme.of(context).textTheme.headlineSmall),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold)),
             ),
+            SizedBox(height: 20),
             BlocBuilder<TasksBloc, TasksState>(
               builder: (context, state) {
                 return InkWell(
@@ -28,10 +37,13 @@ class MyDrawer extends StatelessWidget {
                     Navigator.of(context).pushReplacementNamed(TabScreen.id);
                   },
                   child: ListTile(
-                    leading: Icon(Icons.folder_special),
-                    title: Text('My Tasks'),
+                    leading: Icon(
+                      Icons.folder_special,
+                      color: Colors.indigo[900],
+                    ),
+                    title: const Text('My Tasks'),
                     trailing: Text(
-                        '${state.Pendingtask.length}| ${state.completedtask.length}'),
+                        '${state.pendingtask.length}| ${state.completedtask.length}'),
                   ),
                 );
               },
@@ -44,8 +56,11 @@ class MyDrawer extends StatelessWidget {
                     Navigator.of(context).pushReplacementNamed(RecycleBin.id);
                   },
                   child: ListTile(
-                    leading: Icon(Icons.delete),
-                    title: Text('Bin'),
+                    leading: const Icon(
+                      Icons.delete,
+                      color: Colors.red,
+                    ),
+                    title: const Text('Bin'),
                     trailing: Text('${state.removedtask.length}'),
                   ),
                 );

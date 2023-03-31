@@ -22,7 +22,7 @@ class _FavouriteTaskScreenState extends State<FavouriteTaskScreen> {
       builder: (context, state) {
         List<task> taskslist = state.favouiritetask;
         return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Center(
               child: Chip(label: Text('${state.favouiritetask.length} Tasks')),

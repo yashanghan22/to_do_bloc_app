@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_bloc_app/screens/pending_task_screen.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:to_do_bloc_app/screens/tab_screen.dart';
 import 'package:to_do_bloc_app/services/app_router.dart';

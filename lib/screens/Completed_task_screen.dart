@@ -22,7 +22,7 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
       builder: (context, state) {
         List<task> taskslist = state.completedtask;
         return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Center(
               child: Chip(label: Text('${state.completedtask.length} Tasks')),

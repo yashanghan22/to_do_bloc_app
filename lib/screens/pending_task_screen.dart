@@ -20,14 +20,14 @@ class _PendingTaskScreenState extends State<PendingTaskScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<TasksBloc, TasksState>(
       builder: (context, state) {
-        List<task> taskslist = state.Pendingtask;
+        List<task> taskslist = state.pendingtask;
         return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Center(
               child: Chip(
                   label: Text(
-                      '${state.Pendingtask.length} Pending | ${state.completedtask.length} Completed')),
+                      '${state.pendingtask.length} Pending | ${state.completedtask.length} Completed')),
             ),
             TaskList(tasklist: taskslist)
           ],
