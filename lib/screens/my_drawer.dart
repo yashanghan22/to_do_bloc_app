@@ -20,16 +20,16 @@ class MyDrawer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 10),
               decoration: BoxDecoration(
                   color: Colors.indigo[700],
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(15),
                       bottomRight: Radius.circular(15))),
-              child: Text('Task Drawer',
+              child: const Text('Task Drawer',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 35,
                       fontWeight: FontWeight.bold)),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             BlocBuilder<TasksBloc, TasksState>(
               builder: (context, state) {
                 return InkWell(

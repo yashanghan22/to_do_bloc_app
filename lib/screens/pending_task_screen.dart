@@ -20,7 +20,7 @@ class _PendingTaskScreenState extends State<PendingTaskScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<TasksBloc, TasksState>(
       builder: (context, state) {
-        List<task> taskslist = state.pendingtask;
+        List<Task> taskslist = state.pendingtask;
         return Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

@@ -54,7 +54,7 @@ class _TabScreenState extends State<TabScreen> {
         backgroundColor: Colors.indigo[900],
         title: Text(
           '${_pagedetails[_selectedpageIndex]['title']}',
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
         toolbarHeight: 90,
         centerTitle: true,

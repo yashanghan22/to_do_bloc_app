@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_bloc_app/blocs/bloc_exports.dart';
 import 'package:to_do_bloc_app/widgets/task_tile.dart';
 
 import '../model/task_model.dart';
@@ -10,7 +9,7 @@ class TaskList extends StatelessWidget {
     required this.tasklist,
   });
 
-  final List<task> tasklist;
+  final List<Task> tasklist;
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +20,11 @@ class TaskList extends StatelessWidget {
               .map((e) => ExpansionPanelRadio(
                   value: e.id,
                   headerBuilder: (context, isExpanded) {
-                    return TaskTile(Task: e);
+                    return TaskTile(task: e);
                   },
                   body: Container(
                     alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: SelectableText.rich(TextSpan(children: [
                       const TextSpan(
                         text: 'Text\n',

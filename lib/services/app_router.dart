@@ -12,5 +12,6 @@ class AppRouter {
       default:
         null;
     }
+    return null;
   }
 }

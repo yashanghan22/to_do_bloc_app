@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 import '../blocs/bloc_exports.dart';
@@ -20,7 +22,7 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<TasksBloc, TasksState>(
       builder: (context, state) {
-        List<task> taskslist = state.completedtask;
+        List<Task> taskslist = state.completedtask;
         return Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

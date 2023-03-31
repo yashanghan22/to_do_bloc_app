@@ -3,10 +3,10 @@
 part of 'tasks_bloc.dart';
 
 class TasksState extends Equatable {
-  final List<task> pendingtask;
-  final List<task> completedtask;
-  final List<task> favouiritetask;
-  final List<task> removedtask;
+  final List<Task> pendingtask;
+  final List<Task> completedtask;
+  final List<Task> favouiritetask;
+  final List<Task> removedtask;
   const TasksState({
     this.pendingtask = const [],
     this.completedtask = const [],
@@ -29,24 +29,24 @@ class TasksState extends Equatable {
 
   factory TasksState.fromMap(Map<String, dynamic> map) {
     return TasksState(
-      pendingtask: List<task>.from(
-        (map['Pendingtask'] as List<int>).map<task>(
-          (x) => task.fromMap(x as Map<String, dynamic>),
+      pendingtask: List<Task>.from(
+        (map['Pendingtask'] as List<int>).map<Task>(
+          (x) => Task.fromMap(x as Map<String, dynamic>),
         ),
       ),
-      completedtask: List<task>.from(
-        (map['completedtask'] as List<int>).map<task>(
-          (x) => task.fromMap(x as Map<String, dynamic>),
+      completedtask: List<Task>.from(
+        (map['completedtask'] as List<int>).map<Task>(
+          (x) => Task.fromMap(x as Map<String, dynamic>),
         ),
       ),
-      favouiritetask: List<task>.from(
-        (map['favouiritetask'] as List<int>).map<task>(
-          (x) => task.fromMap(x as Map<String, dynamic>),
+      favouiritetask: List<Task>.from(
+        (map['favouiritetask'] as List<int>).map<Task>(
+          (x) => Task.fromMap(x as Map<String, dynamic>),
         ),
       ),
-      removedtask: List<task>.from(
-        (map['removedtask'] as List<int>).map<task>(
-          (x) => task.fromMap(x as Map<String, dynamic>),
+      removedtask: List<Task>.from(
+        (map['removedtask'] as List<int>).map<Task>(
+          (x) => Task.fromMap(x as Map<String, dynamic>),
         ),
       ),
     );

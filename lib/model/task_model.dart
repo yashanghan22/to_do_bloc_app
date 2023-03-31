@@ -1,13 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable, camel_case_types
 import 'package:equatable/equatable.dart';
 
-class task extends Equatable {
+class Task extends Equatable {
   final String title;
   final String description;
   final String id;
   bool? isDone;
   bool? isDeleted;
-  task({
+  Task({
     required this.title,
     required this.description,
     required this.id,
@@ -18,14 +18,14 @@ class task extends Equatable {
     isDeleted = isDeleted ?? false;
   }
 
-  task copyWith({
+  Task copyWith({
     String? title,
     String? description,
     String? id,
     bool? isDone,
     bool? isDeleted,
   }) {
-    return task(
+    return Task(
       title: title ?? this.title,
       description: description ?? this.description,
       id: id ?? this.id,
@@ -44,8 +44,8 @@ class task extends Equatable {
     };
   }
 
-  factory task.fromMap(Map<String, dynamic> map) {
-    return task(
+  factory Task.fromMap(Map<String, dynamic> map) {
+    return Task(
       title: map['title'] as String,
       description: map['description'] as String,
       id: map['id'] as String,

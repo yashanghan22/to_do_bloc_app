@@ -20,7 +20,7 @@ class _FavouriteTaskScreenState extends State<FavouriteTaskScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<TasksBloc, TasksState>(
       builder: (context, state) {
-        List<task> taskslist = state.favouiritetask;
+        List<Task> taskslist = state.favouiritetask;
         return Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

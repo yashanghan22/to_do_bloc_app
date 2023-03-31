@@ -25,7 +25,7 @@ class AddTaskWidget extends StatelessWidget {
               decoration: const InputDecoration(
                   label: Text('Title'), border: OutlineInputBorder()),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             TextField(
               autofocus: true,
               controller: descipcontroller,
@@ -40,11 +40,11 @@ class AddTaskWidget extends StatelessWidget {
                     child: const Text('Cancel')),
                 ElevatedButton(
                     onPressed: () {
-                      var tasks = task(
+                      var tasks = Task(
                           title: titlecontroller.text,
                           id: GUIDGen.generate(),
                           description: descipcontroller.text);
-                      context.read<TasksBloc>().add(Addtask(Task: tasks));
+                      context.read<TasksBloc>().add(Addtask(task: tasks));
                       Navigator.of(context).pop();
                     },
                     child: const Text('Add'))
