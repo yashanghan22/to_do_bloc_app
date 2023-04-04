@@ -24,10 +24,10 @@ class _TabScreenState extends State<TabScreen> {
       'pagename': const CompletedTaskScreen(title: 'Completed Tasks'),
       'title': 'Completed Tasks'
     },
-    {
-      'pagename': const FavouriteTaskScreen(title: 'Favourite Tasks'),
-      'title': 'Favourite Tasks'
-    },
+    // {
+    //   'pagename': const FavouriteTaskScreen(title: 'Favourite Tasks'),
+    //   'title': 'Favourite Tasks'
+    // },
   ];
 
   var _selectedpageIndex = 0;
@@ -79,8 +79,8 @@ class _TabScreenState extends State<TabScreen> {
               icon: Icon(Icons.list), label: 'Pending tasks'),
           BottomNavigationBarItem(
               icon: Icon(Icons.done), label: 'Completed tasks'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_rounded), label: 'Favourite tasks'),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.favorite_rounded), label: 'Favourite tasks'),
         ],
         currentIndex: _selectedpageIndex,
         onTap: (value) {
